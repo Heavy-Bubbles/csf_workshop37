@@ -1,0 +1,23 @@
+<h1>File Upload</h1>
+
+<form [formGroup]="uploadForm" (submit)="process()">
+    <table>
+        <tr>
+            <td>File:</td>
+            <td>
+                <input type="file" placeholder="File" accept="image/*" #file>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit">View File</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<h3 *ngIf="!!fileName">
+    Uploading {{ file }}
+</h3>
+

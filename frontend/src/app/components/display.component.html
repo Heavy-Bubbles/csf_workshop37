@@ -1,0 +1,13 @@
+<h1> {{ fileName }}</h1>
+
+<div *ngIf="fileUrl; else loading">
+    <img [src]="fileUrl">
+</div>
+
+<button type="button" [routerLink]="['/']">
+    Back
+</button>
+
+<ng-template #loading>
+    <h1>Loading...</h1>
+</ng-template>
